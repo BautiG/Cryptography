@@ -12,19 +12,19 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 redo="yes"
 
-while redo=="yes":
+while redo == "yes":
     letter=str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
-    if letter or trytwo == "e":
+    if letter == "e":
         message=input("message: ")
         key=input("key: ")
-        redo=="no"
-    elif letter or trytwo == "d":
+        redo = "yes"
+    elif letter == "d":
         message=input("message: ")
         key=input("key: ")
-        redo=="no"
-    elif letter or trytwo == "q":
+        redo = "yes"
+    elif letter == "q":
         print("Goodbye!")
-        redo=="no"
+        redo = "no"
     else:
-        trytwo=str(input("Did not understand command, try again."))
-        redo=="yes"
+        print("Did not understand command, try again."))
+        redo = "yes"
