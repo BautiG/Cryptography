@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Bauti G
-Credit: Liam S.
+Credit: Liam S., Vinzent
 
 Assignment:
 
@@ -34,9 +34,6 @@ while redo == "yes":
         print("Did not understand command, try again.")
         redo = "yes"
 
-print(messagelist)
-print(keylist)
-
 numbermessage=[]
 for char in messagelist:
     numbermessage.append(associations.find(char))
@@ -46,4 +43,12 @@ numberkey=[]
 for char in keylist:
     numberkey.append(associations.find(char))
 print(numberkey)
-for c
+
+lengthmessage = len(numbermessage)
+sumlist=[]
+while number<lengthmessage:
+    sumlist.append(numbermessage[number]+numberkey[number])
+    number+=1
+
+associations[index]
+print(sumlist)
