@@ -20,6 +20,20 @@ while redo == "yes":
         messagelist=list(message)
         key=input("key: ")
         keylist=list(key)
+        numbermessage=[]
+        for char in messagelist:
+            numbermessage.append(associations.find(char))
+
+        numberkey=[]
+        for char in keylist:
+            numberkey.append(associations.find(char))
+
+        lengthmessage = len(numbermessage)
+        sumlist=[]
+        while number<lengthmessage:
+            sumlist.append(numbermessage[number]+numberkey[number])
+            number+=1
+        print(sumlist)
         redo = "yes"
     elif letter == "d":
         message=input("message: ")
@@ -33,7 +47,7 @@ while redo == "yes":
     else:
         print("Did not understand command, try again.")
         redo = "yes"
-
+"""
 numbermessage=[]
 for char in messagelist:
     numbermessage.append(associations.find(char))
@@ -49,6 +63,4 @@ sumlist=[]
 while number<lengthmessage:
     sumlist.append(numbermessage[number]+numberkey[number])
     number+=1
-
-associations[index]
-print(sumlist)
+"""
