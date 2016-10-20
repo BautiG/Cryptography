@@ -26,9 +26,17 @@ while redo == "yes":
             numbermessage.append(associations.find(char))
 
         numberkey=[]
+        lengthkey = len(keylist)
         for char in keylist:
             numberkey.append(associations.find(char))
 
+        if lengthkey<lengthmessage:
+            while lengthkey<lengthmessage:
+                keylist=keylist+list(key)
+                numberkey = len(keylist)
+        if lengthkey>lengthmessage:
+            while lengthkey>lengthmessage:
+                numberkey.pop(lengthkey)
         sumlist=[]
         while number<lengthmessage:
             sumlist.append(numbermessage[number]+numberkey[number])
