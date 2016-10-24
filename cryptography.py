@@ -62,6 +62,44 @@ while redo == "yes":
         messagelist=list(message)
         key=input("key: ")
         keylist=list(key)
+        numbermessage=[]
+        lengthmessage = len(messagelist)
+        for char in messagelist:
+            numbermessage.append(associations.find(char))
+        
+        keystring = key
+        lengthkey=len(keystring)
+        while lengthkey<lengthmessage:
+            keystring=keystring+key
+            lengthkey=len(keystring)
+        while lengthkey>lengthmessage:
+            keystring=keystring[:-1]
+            lengthkey=len(keystring)
+        
+        numberkey=[]
+        for char in keystring:
+            numberkey.append(associations.find(char))
+        
+        sumlist=[]
+        while number<lengthmessage:
+            sumlist.append(numbermessage[number]-numberkey[number])
+            number+=1
+        number=0
+
+        while number < lengthmessage:#if this dosn't work, change the numbers
+            if sumlist[number]<0:
+                sumlist[number]+=85
+            number+=1
+        
+        number=0
+        endlist=[]
+        while number<lengthmessage:
+            endlist.append(associations[sumlist[number]])
+            number+=1
+        print(''.join(endlist))
+
+        
+        
         redo = "yes"
     elif letter == "q":
         print("Goodbye!")
@@ -69,20 +107,3 @@ while redo == "yes":
     else:
         print("Did not understand command, try again.")
         redo = "yes"
-"""
-numbermessage=[]
-for char in messagelist:
-    numbermessage.append(associations.find(char))
-print(numbermessage)
-
-numberkey=[]
-for char in keylist:
-    numberkey.append(associations.find(char))
-print(numberkey)
-
-lengthmessage = len(numbermessage)
-sumlist=[]
-while number<lengthmessage:
-    sumlist.append(numbermessage[number]+numberkey[number])
-    number+=1
-"""
