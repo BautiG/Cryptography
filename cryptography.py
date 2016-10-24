@@ -90,15 +90,14 @@ while redo == "yes":
             if sumlist[number]<0:
                 sumlist[number]+=85
             number+=1
-        
+
         number=0
         endlist=[]
         while number<lengthmessage:
             endlist.append(associations[sumlist[number]])
             number+=1
-        print(''.join(endlist))
-
         
+        print(''.join(endlist))
         
         redo = "yes"
     elif letter == "q":
