@@ -24,25 +24,39 @@ while redo == "yes":
         lengthmessage = len(messagelist)
         for char in messagelist:
             numbermessage.append(associations.find(char))
-
-        numberkey=[]
-        lengthkey = len(keylist)
-        for char in keylist:
-            numberkey.append(associations.find(char))
-
+        
+        keystring = key
+        lengthkey=len(keystring)
         while lengthkey<lengthmessage:
-            keylist=list(key)+list(key)
-            numberkey = len(keylist)
-            lengthkey= len(keylist)
+            keystring=keystring+key
+            lengthkey=len(keystring)
         while lengthkey>lengthmessage:
-            del numberkey[lengthkey]
-            lengthkey= len(lengthkey)
-
+            keystring=keystring[:-1]
+            lengthkey=len(keystring)
+        print(keystring)
+        
+        numberkey=[]
+        for char in keystring:
+            numberkey.append(associations.find(char))
+        
         sumlist=[]
         while number<lengthmessage:
             sumlist.append(numbermessage[number]+numberkey[number])
             number+=1
-        print(sumlist)
+        number=0
+
+        while number < lengthmessage:#if this dosn't work, change the numbers
+            if sumlist[number]>84:
+                sumlist[number]-=85
+            number+=1
+        
+        number=0
+        endlist=[]
+        while number<lengthmessage:
+            endlist.append(associations[sumlist[number]])
+            number+=1
+        print(''.join(endlist))
+
         redo = "yes"
     elif letter == "d":
         message=input("message: ")
