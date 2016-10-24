@@ -33,7 +33,6 @@ while redo == "yes":
         while lengthkey>lengthmessage:
             keystring=keystring[:-1]
             lengthkey=len(keystring)
-        print(keystring)
         
         numberkey=[]
         for char in keystring:
