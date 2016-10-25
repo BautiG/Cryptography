@@ -38,12 +38,13 @@ while redo == "yes":
         for char in keystring:
             numberkey.append(associations.find(char))
         
+        number=0
         sumlist=[]
         while number<lengthmessage:
             sumlist.append(numbermessage[number]+numberkey[number])
             number+=1
-        number=0
 
+        number=0
         while number < lengthmessage:
             if sumlist[number]>84:
                 sumlist[number]-=85
