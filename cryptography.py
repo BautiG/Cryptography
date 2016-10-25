@@ -79,6 +79,7 @@ while redo == "yes":
         numberkey=[]
         for char in keystring:
             numberkey.append(associations.find(char))
+        number=0
         
         sumlist=[]
         while number<lengthmessage:
