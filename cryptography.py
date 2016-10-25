@@ -44,7 +44,7 @@ while redo == "yes":
             number+=1
         number=0
 
-        while number < lengthmessage:#if this dosn't work, change the numbers
+        while number < lengthmessage:
             if sumlist[number]>84:
                 sumlist[number]-=85
             number+=1
@@ -86,7 +86,7 @@ while redo == "yes":
             number+=1
         number=0
 
-        while number < lengthmessage:#if this dosn't work, change the numbers
+        while number < lengthmessage:
             if sumlist[number]<0:
                 sumlist[number]+=85
             number+=1
