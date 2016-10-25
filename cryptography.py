@@ -96,7 +96,6 @@ while redo == "yes":
         while number<lengthmessage:
             endlist.append(associations[sumlist[number]])
             number+=1
-        
         print(''.join(endlist))
         
         redo = "yes"
