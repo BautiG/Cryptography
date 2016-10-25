@@ -55,6 +55,7 @@ while redo == "yes":
             endlist.append(associations[sumlist[number]])
             number+=1
         print(''.join(endlist))
+        number=0
 
         redo = "yes"
     elif letter == "d":
