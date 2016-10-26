@@ -16,9 +16,9 @@ number=0
 while redo == "yes":
     letter=str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     if letter == "e":
-        message=input("message: ")
+        message=input("Message: ")
         messagelist=list(message)
-        key=input("key: ")
+        key=input("Key: ")
         keylist=list(key)
         numbermessage=[]
         lengthmessage = len(messagelist)
@@ -60,9 +60,9 @@ while redo == "yes":
 
         redo = "yes"
     elif letter == "d":
-        message=input("message: ")
+        message=input("Message: ")
         messagelist=list(message)
-        key=input("key: ")
+        key=input("Key: ")
         keylist=list(key)
         numbermessage=[]
         lengthmessage = len(messagelist)
